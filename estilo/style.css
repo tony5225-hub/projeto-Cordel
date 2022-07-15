@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/*para importar esa fonte abre o googlefonts escolhe a font onde aparece adiciona e depois lado direito escolhe import e copia o link*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {/*esse root serve para depois que for aplicar as outras fontes serve como variavel de fontes para incluir*/
+  --fonte1: verdana, Geneva, tahoma, sans-serif;
+  --fonte2:'Passion One', cursive;
+  --fonte3:'Sriracha', cursive;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  /*configurações e html e body em comum*/
+  html, body {
+    min-height: 100vh;/*tamanho minimo da view hight(visão da altura)*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+  }
+  /*configurações no header topo do site*/
+  header { 
+        background-color: black;
+        color: white; 
+        text-align: center;
+  }
+
+  header > h1 {
+    padding-top: 50px ;/*espaço em cima e duas técnicas novas para deixar letras maisuculas text-transform: uppercase; deixa tudo maiusculo e a font-variant: small-caps; elas ficam maiusculas mas discretas */
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw;/*esse recurso (10vw significa visão de largura)serve para quando dimunuir ou aumentar no site a letra vai aumentar e diminuir automático (isso é feito pois se deixar no padrão em  quando acessar em celular a letra vai ficar muito grande*/
+  }
+
+  header {
+    padding-bottom: 50px; /* para deixar o COrdel moderno no cabeçario com  50 px para cima e para baixo*/ 
+  }
+
+  header a, footer a{ /*usei a para deixar com cor branca o text-decoration com none tirar o sublinhado e font weight negritar, essa tag  com header a footer é maneira para mostrar que esta sendo modificado no cabeçalho e no ropé os links ao mesmo tempo */
+    color: white ;
+    text-decoration: none ;
+    font-weight: bolder;
+  }
+
+  header a:hover, footer a:hover { /*aqui para quando passar o mouse no link milton duarte ele mostra o sublinhado, essa tag  com header a footer é maneira para mostrar que esta sendo modificado no cabeçalho e no ropé os links ao mesmo tempo */
+    text-decoration: underline;
+  }
+
+  /*obs: nesta section as configurações de padding e line-height vão servir para todas as sections normal e imagem para distaciamento das septilhas. */
+  section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;/*esse recurso (3.5vw significa visão de largura)serve para quando diminuir ou aumentar no site a letra vai aumentar e diminuir automático (isso é feito pois se deixar no padrão em  quando acessar em celular a letra vai ficar muito grande*/
+  }
+
+  section > p {
+    padding-bottom: 2em;
+  }
+
+
+  /*obs quando colocar a section colocar entre header e footer para que fique no meio assim fica organizado*/
+  section.normal {
+    background-color: white;
+    color: black;
+
+  }
+
+  section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473); /* para colocar uma sombra no box das imagens esses 06px 06px 13px 0px são 06px 06px deslocamento lateral e vertical 13 px de espalhamento e 0px de ampliação e cor Black e colocando mouse emcima diminui a intensidade do black deixando a sombra mais discreta */
+    background-size: cover ;/*esse recurso serve para dar diminuir a imagem */
+    background-attachment: fixed; /*deixar a imagem fixa quando usar a barra de rolagem vai aparecer fixa efeito parallax simples*/ 
+  }
+
+  section.imagem> p{
+  display: inline-block; /*aqui utilizou esse display para ser caixa escura  separada  e depois embaixo padding de 5px para as letras não ficarem, coladas na caixa */
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.514);/*essas alterações feitas aqui são todas para o parágrafo do site nas imagens e na sombra que vai ser colocada, altera todas do site*/   
+  text-shadow: 1px 1px 0px black; /*esses 01px 01px 0px são 1px 01px deslocamento lateral e vertical e 0px de espalhamento e cor Black */
+  
+  }
+
+  section#img01 {
+    background-image: url('../imagens/background001.jpg') ;
+    background-position: right center;
+    
+  }
+
+  section#img02 {
+    background-image: url('../imagens/background002.jpg');
+   
+  }
+
+  footer { /*centralizar o link no rodapé e por as letras em branco e pasdding 10px dar distaciamento do link.*/
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
